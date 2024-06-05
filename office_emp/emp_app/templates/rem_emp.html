@@ -1,0 +1,31 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Office Employee Management System</title>
+    <link rel="stylesheet" href="{% static 'rem_style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Content here -->
+        <h1>Remove An Employee</h1>
+        <hr>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Choose Employee To Be Removed
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              {%for emp in emps %}
+              <a class="dropdown-item" href="/rem_emp/{{emp.id}}">{{emp.first_name}} {{emp.last_name}}</a>
+              {% endfor %}
+            </div>
+          </div>
+    </div>
+
+</body>
+
+</html>

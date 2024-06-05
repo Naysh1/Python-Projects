@@ -1,0 +1,87 @@
+body {
+    background-color: #121212;
+    /* Dark background for the body */
+    color: #ffffff;
+    /* White text for readability */
+    font-family: Arial, sans-serif;
+    /* Font family */
+    display: flex;
+    /* Use Flexbox to center the content */
+    justify-content: center;
+    /* Center horizontally */
+    align-items:first baseline;
+    /* Center vertically */
+    height: 100vh;
+    /* Full height */
+    margin: 0;
+    /* Remove default margin */
+}
+
+hr {
+    display:flex;
+    margin-block-start: 0.5em;
+    margin-block-end: 2.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.dropdown {
+    padding: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    background-color: #007bff;
+    /* Bootstrap primary color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+}
+
+.dropdown-toggle:hover{
+    background-color: #0056b3; /* Darker shade for hover effect */
+    
+}
+.dropdown-toggle:active{
+    background-color: #004085; /* Darker shade for hover effect */
+}
+.dropdown-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .5);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #1e1e1e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #343a40;
+}
+
+
+.dropdown:focus-within .dropdown-menu {
+    display: block;
+}

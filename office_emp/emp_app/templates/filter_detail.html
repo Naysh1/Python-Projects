@@ -1,0 +1,33 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Office Employee Management System</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Content here -->
+        <h1>Filter Employee Details</h1>
+        <hr>
+        <form action="/filter_detail" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="name" class="form-label">First Name/Last Name</label>
+              <input type="text" id="name" name="name" class="form-control" value="{{name}}">
+              
+              <label for="dept" class="form-label">Department</label>
+              <input type="text" id="dept" name="dept" class="form-control" value="{{dept}}">
+              <label for="role" class="form-label">Role</label>
+              <input type="text" id="role" name="role" class="form-control" value="{{role}}">           
+            </div>          
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</body>
+
+</html>
